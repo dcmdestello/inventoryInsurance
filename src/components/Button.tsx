@@ -4,8 +4,11 @@ import { colors } from "../theme/colors";
 export default function Button({
   title,
   onPress,
-  disabled
-}: PressableProps & { title: string }) {
+  disabled,
+  color
+}: PressableProps & { title: string, color?: string }) {
+  let textColor = (disabled ? colors.mainGrey : colors.mainBlue);
+  if (color) textColor = color;
   return (
     <Pressable
       onPress={onPress}
@@ -17,7 +20,7 @@ export default function Button({
       hitSlop={20}
     >
       <Text
-        style={{ fontSize: 17, color: disabled ? colors.mainGrey : colors.mainBlue}}
+        style={{ fontSize: 17, color: textColor}}
       >
         {title}
       </Text>

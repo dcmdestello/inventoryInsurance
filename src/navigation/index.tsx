@@ -8,7 +8,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Pressable, Text, View } from "react-native";
+import { /* Pressable, */ Text, View } from "react-native";
 
 import InventoryScreen from "../screens/InventoryScreen";
 import AddItemScreen from "../screens/AddItemScreen";
@@ -18,7 +18,7 @@ import {
   RootTabScreenProps,
 } from "./types";
 import { colors } from "../theme/colors";
-import { fonts } from "../theme/fonts";
+// import { fonts } from "../theme/fonts";
 import { Title } from "../components/Title";
 
 export default function Navigation() {
@@ -76,7 +76,7 @@ function RootNavigator() {
  * https://reactnavigation.org/docs/bottom-tab-navigator
  */
 const BottomTab = createBottomTabNavigator<RootTabParamList>();
-const tabBarLabelStyle = { fontFamily: fonts.regular, fontSize: 10 };
+const tabBarLabelStyle = { /*fontFamily: fonts.regular,*/ fontSize: 10 };
 function BottomTabNavigator() {
   return (
     <BottomTab.Navigator
@@ -110,20 +110,20 @@ function BottomTabNavigator() {
         options={({ navigation }: RootTabScreenProps<"Inventory">) => ({
           tabBarLabelStyle,
           tabBarIcon: ({ color }) => <TabBarIcon name="albums" color={color} />,
-          headerRight: () => (
-            <Pressable
-              onPress={() => navigation.navigate("AddItem")}
-              style={({ pressed }) => ({
-                opacity: pressed ? 0.5 : 1,
-              })}
-            >
-              <Ionicons
-                name="add-circle"
-                size={25}
-                style={{ marginRight: 15 }}
-              />
-            </Pressable>
-          ),
+          // headerRight: () => (
+          //   <Pressable
+          //     onPress={() => navigation.navigate("AddItem")}
+          //     style={({ pressed }) => ({
+          //       opacity: pressed ? 0.5 : 1,
+          //     })}
+          //   >
+          //     <Ionicons
+          //       name="add-circle"
+          //       size={25}
+          //       style={{ marginRight: 15 }}
+          //     />
+          //   </Pressable>
+          // ),
         })}
       />
       <BottomTab.Screen

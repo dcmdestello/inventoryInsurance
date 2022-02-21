@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
-import { fonts } from "../theme/fonts";
+// import { fonts } from "../theme/fonts";
 import AddButton from "./AddButton";
 
 export const Title = (props: {
@@ -16,14 +16,14 @@ export const Title = (props: {
 
 const styles = StyleSheet.create({
   title: {
-    fontFamily: fonts.bold,
+    // fontFamily: fonts.bold,
     fontSize: 34,
     lineHeight: 42,
   },
   titleContainer: {
     width: "100%",
     height: 42,
-    marginTop: 99,
+    marginTop: 40,
     backgroundColor: "transparent",
     flexDirection: "row",
     alignItems: "center",

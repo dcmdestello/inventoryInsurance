@@ -26,12 +26,12 @@ export type RootStackScreenProps<Screen extends keyof RootStackParamList> =
   NativeStackScreenProps<RootStackParamList, Screen>;
 
 export type RootTabParamList = {
-  Inventory: undefined;
-  Home: undefined;
-  Insurance: undefined;
-  Realty: undefined;
-  Menu: undefined;
-  AddItemScreen: undefined
+  Inventory: undefined,
+  Home: undefined,
+  Insurance: undefined,
+  Realty: undefined,
+  Menu: undefined,
+  AddItemScreen: undefined,
 };
 
 export type RootTabScreenProps<Screen extends keyof RootTabParamList> =
@@ -39,14 +39,3 @@ export type RootTabScreenProps<Screen extends keyof RootTabParamList> =
     BottomTabScreenProps<RootTabParamList, Screen>,
     NativeStackScreenProps<RootStackParamList>
   >;
-
-export type InventoryItem = {
-  id?: string;
-  name: string;
-  value: string | number;
-  type?: string;
-  description?: string;
-  photo?: string;
-};
-
-export type Items = InventoryItem[];
